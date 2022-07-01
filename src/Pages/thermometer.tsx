@@ -1,5 +1,6 @@
 import {Button, Card, Grid, Header, Icon, Input, Segment} from "semantic-ui-react";
 import React, {ChangeEvent, useState} from "react";
+import axios from "axios";
 
 const Thermometer = () => {
     const [error, setError] = useState<{}>({});
@@ -19,14 +20,14 @@ const Thermometer = () => {
     }
 
     const handleCreateThermometer = () => {
-        fetch("http://localhost:8089/thermometer", {
+        fetch("http://localhost:8080/KeepCool-1.0/KeepCool/Thermometer/anlegen", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "content-type": "application/json"
             },
             body: JSON.stringify({
-                "name": name,
-                "seriennummer": id
+                "id": id,
+                "name": name
             })
         })
             .then(res => res.json())
@@ -34,10 +35,7 @@ const Thermometer = () => {
                     setThermometerAddOpen(false);
                     setThermometer([...thermometer, {"name": name, "id": id}]);
                 }, (error) => {
-                    setError(error);
                     console.log(error);
-                    setThermometer([...thermometer, {"name": name, "id": id}]);
-                    console.log(thermometer);
                 }
             )
     }
