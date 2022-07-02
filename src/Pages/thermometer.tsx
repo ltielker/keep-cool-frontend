@@ -1,6 +1,5 @@
 import {Button, Card, Grid, Header, Icon, Input, Segment} from "semantic-ui-react";
 import React, {ChangeEvent, useState} from "react";
-import axios from "axios";
 
 const Thermometer = () => {
     const [error, setError] = useState<{}>({});
