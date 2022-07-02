@@ -1,50 +1,81 @@
-import {Button, Label, Icon, Header, Modal, Segment, Grid, Input} from "semantic-ui-react";
-import React, {useEffect, useState} from "react";
+import {Button, Grid, Header, Icon, Input, Modal, Segment} from "semantic-ui-react";
+import React, {ChangeEvent, useState} from "react";
 
 const Messung = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [log, setLog] = useState<String[]>([]);
     const [messungAddOpen, setMessungAddOpen] = useState(false);
-    const [thermometerData, setThermometerData] = useState<{ timestamp: any, temperature: number, unit: string }>({
-        timestamp: 0,
-        temperature: 0,
-        unit: "°C"
-    });
-    const [error, setError] = useState<{}>({});
 
-    useEffect(() => {
-        fetch("http://localhost:8089/temperature")
-            .then(res => res.json())
-            .then((data) => {
-                    console.log(data);
-                    if (data.temperature > 10) {
-                        setModalOpen(true);
-                    }
-                    setThermometerData(data);
-                }, (error) => {
-                    setError(error);
-                }
-            )
-    }, []);
+    // const [error, setError] = useState<{}>({});
+    const [name, setName] = useState<string>("");
+    const [thermometerID, setThermometerID] = useState<number>(0);
+    const [minTemperature, setMinTemperature] = useState<number>(0);
+    const [maxTemperature, setMaxTemperature] = useState<number>(0);
 
     const clearLog = () => {
         setLog([])
     };
 
-    const fetchData = () => {
-        fetch("http://localhost:8089/temperature")
+    const handleName = (e: ChangeEvent<HTMLInputElement>) => {
+        setName(e.target.value);
+    }
+
+    const handleThermometerID = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (Number.parseInt(e.target.value) > 0) {
+            setThermometerID(Number.parseInt(e.target.value));
+        }
+    }
+
+    const handleMinTemperature = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (Number.parseInt(e.target.value) > 0) {
+            setMinTemperature(Number.parseInt(e.target.value));
+        }
+    }
+
+    const handleMaxTemperature = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (Number.parseInt(e.target.value) > 0) {
+            setMaxTemperature(Number.parseInt(e.target.value));
+        }
+    }
+
+    const handleCreateMessung = () => {
+        fetch("http://localhost:8080/KeepCool-1.0/KeepCool/Messung/anlegen", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify({
+                "name": name,
+                "thermometerID": thermometerID,
+                "minTemperature": minTemperature,
+                "maxTemperature": maxTemperature
+            })
+        })
             .then(res => res.json())
-            .then((data) => {
-                    setThermometerData(data);
+            .then((data: {"id": number}) => {
+                    setMessungAddOpen(false);
+                    setLog([...log, "Messung angelegt"]);
+                    console.log(data.id)
                 }, (error) => {
-                    setError(error);
+                    console.log(error);
                 }
             )
-        setLog([
-            `${thermometerData.timestamp}: ${thermometerData.temperature}${thermometerData.unit}`,
-            ...log
-        ].slice(0, 20));
-    };
+    }
+
+    // const fetchData = () => {
+    //     fetch("http://localhost:8089/temperature")
+    //         .then(res => res.json())
+    //         .then((data) => {
+    //                 setThermometerData(data);
+    //             }, (error) => {
+    //                 setError(error);
+    //             }
+    //         )
+    //     setLog([
+    //         `${thermometerData.timestamp}: ${thermometerData.temperature}${thermometerData.unit}`,
+    //         ...log
+    //     ].slice(0, 20));
+    // };
 
     return (
         <>
@@ -56,7 +87,8 @@ const Messung = () => {
                 </Header>
             </Segment>
             <Segment>
-                <Button onClick={() => setMessungAddOpen(!messungAddOpen)} content={'Neue Messung erstellen'}/>
+                <Button onClick={() => setMessungAddOpen(!messungAddOpen)} icon={'plus'}
+                        content={'Neue Messung erstellen'}/>
                 <Modal basic onClose={() => {
                     setModalOpen(false)
                 }} open={modalOpen} size={'large'}>
@@ -78,25 +110,33 @@ const Messung = () => {
                         <Grid.Row>
                             <Grid.Column>
                                 <Header as={"h4"}>Name</Header>
-                                <Input placeholder={"Name"} onChange={() => console.log("Hallo")} type={"text"} fluid/>
+                                <Input placeholder={"Name der Messung"} onChange={handleName}
+                                       type={"text"} fluid/>
                             </Grid.Column>
                             <Grid.Column>
                                 <Header as={"h4"}>ThermometerID</Header>
-                                <Input placeholder={"ID"} onChange={() => console.log("Hallo")} type={"text"} fluid/>
+                                <Input placeholder={"ID des Thermometers"} onChange={handleThermometerID}
+                                       type={"text"} fluid/>
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>
                             <Grid.Column>
-                                <Header as={"h4"}>Maximale Temperatur</Header>
-                                <Input placeholder={"Name"} onChange={() => console.log("Hallo")} type={"text"} fluid/>
+                                <Header as={"h4"}>Minimaltemperatur</Header>
+                                <Input placeholder={"Minimaltemperatur der Messung"}
+                                       onChange={handleMinTemperature} type={"text"} label={{content: '°C'}}
+                                       labelPosition={"right"} fluid/>
                             </Grid.Column>
                             <Grid.Column>
-                                <Header as={"h4"}>Minimalste Temperatur</Header>
-                                <Input placeholder={"ID"} onChange={() => console.log("Hallo")} type={"text"} fluid/>
+                                <Header as={"h4"}>Maximaltemperatur</Header>
+                                <Input placeholder={"Maximaltemperatur der Messung"}
+                                       onChange={handleMaxTemperature} type={"text"} label={{content: '°C'}}
+                                       labelPosition={"right"} fluid/>
                             </Grid.Column>
                         </Grid.Row>
-                        <Grid.Column textAlign={"left"} width={3} verticalAlign={"bottom"}>
-                            <Button onClick={() => console.log("Hallo")} content={'Thermometer hinzufügen'}/>
+                        <Grid.Column/>
+                        <Grid.Column textAlign={"left"} verticalAlign={"bottom"}>
+                            <Button onClick={handleCreateMessung} floated={"right"}
+                                    content={'Thermometer hinzufügen'}/>
                         </Grid.Column>
                     </Grid>
                 </Segment>
