@@ -6,7 +6,12 @@ const Messung = () => {
     const [log, setLog] = useState<String[]>([]);
     const [messungAddOpen, setMessungAddOpen] = useState(false);
 
-    // const [error, setError] = useState<{}>({});
+    const [alleThermometer, setAlleThermometer] = useState<{
+        name: string,
+        thermometerID: number,
+        minTemperatur: number,
+        maxTemperatur: number
+    }[]>([]);
     const [name, setName] = useState<string>("");
     const [thermometerID, setThermometerID] = useState<number>(0);
     const [minTemperature, setMinTemperature] = useState<number>(0);
@@ -52,8 +57,14 @@ const Messung = () => {
             })
         })
             .then(res => res.json())
-            .then((data: {"id": number}) => {
+            .then((data: { "id": number }) => {
                     setMessungAddOpen(false);
+                    setAlleThermometer([...alleThermometer, {
+                        "name": name,
+                        "thermometerID": thermometerID,
+                        "minTemperatur": minTemperature,
+                        "maxTemperatur": maxTemperature
+                    }]);
                     setLog([...log, "Messung angelegt"]);
                     console.log(data.id)
                 }, (error) => {
@@ -61,21 +72,6 @@ const Messung = () => {
                 }
             )
     }
-
-    // const fetchData = () => {
-    //     fetch("http://localhost:8089/temperature")
-    //         .then(res => res.json())
-    //         .then((data) => {
-    //                 setThermometerData(data);
-    //             }, (error) => {
-    //                 setError(error);
-    //             }
-    //         )
-    //     setLog([
-    //         `${thermometerData.timestamp}: ${thermometerData.temperature}${thermometerData.unit}`,
-    //         ...log
-    //     ].slice(0, 20));
-    // };
 
     return (
         <>
