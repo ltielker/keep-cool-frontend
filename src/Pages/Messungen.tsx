@@ -1,16 +1,17 @@
-import {Button, Grid, Header, Icon, Input, Modal, Segment} from "semantic-ui-react";
+import {Button, Card, Grid, Header, Icon, Input, Modal, Segment} from "semantic-ui-react";
 import React, {ChangeEvent, useState} from "react";
+import {Link} from "react-router-dom";
 
-const Messung = () => {
+const Messungen = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [log, setLog] = useState<String[]>([]);
     const [messungAddOpen, setMessungAddOpen] = useState(false);
-
-    const [alleThermometer, setAlleThermometer] = useState<{
+    const [alleMessungen, setAlleMessungen] = useState<{
         name: string,
         thermometerID: number,
         minTemperatur: number,
-        maxTemperatur: number
+        maxTemperatur: number,
+        id: number
     }[]>([]);
     const [name, setName] = useState<string>("");
     const [thermometerID, setThermometerID] = useState<number>(0);
@@ -59,16 +60,26 @@ const Messung = () => {
             .then(res => res.json())
             .then((data: { "id": number }) => {
                     setMessungAddOpen(false);
-                    setAlleThermometer([...alleThermometer, {
+                    setAlleMessungen([...alleMessungen, {
                         "name": name,
                         "thermometerID": thermometerID,
                         "minTemperatur": minTemperature,
-                        "maxTemperatur": maxTemperature
+                        "maxTemperatur": maxTemperature,
+                        "id": data.id
                     }]);
                     setLog([...log, "Messung angelegt"]);
                     console.log(data.id)
                 }, (error) => {
                     console.log(error);
+                    setMessungAddOpen(false);
+                    setAlleMessungen([...alleMessungen, {
+                        "name": name,
+                        "thermometerID": thermometerID,
+                        "minTemperatur": minTemperature,
+                        "maxTemperatur": maxTemperature,
+                        "id": 42
+                    }]);
+                    setLog([...log, "Messung angelegt"]);
                 }
             )
     }
@@ -79,15 +90,15 @@ const Messung = () => {
             <Segment>
                 <Header as='h1'>
                     <Icon name='edit'/>
-                    <Header.Content>Messung</Header.Content>
+                    <Header.Content>Messungen</Header.Content>
                 </Header>
             </Segment>
             <Segment>
                 <Button onClick={() => setMessungAddOpen(!messungAddOpen)} icon={'plus'}
                         content={'Neue Messung erstellen'}/>
-                <Modal basic onClose={() => {
+                <Modal basic open={modalOpen} size={'large'} onClose={() => {
                     setModalOpen(false)
-                }} open={modalOpen} size={'large'}>
+                }}>
                     <Header icon>
                         <Icon name='thermometer full'/>
                         Hohe Temperatur erkannt
@@ -137,17 +148,64 @@ const Messung = () => {
                     </Grid>
                 </Segment>
             }
+            <Segment>
+                <Header as='h3'>
+                    <Icon name='list'/>
+                    <Header.Content>Alle Messungen</Header.Content>
+                </Header>
+                {
+                    (alleMessungen === undefined || alleMessungen.length === 0) &&
+                    <Segment placeholder>
+                        <Header icon>
+                            <Icon name='search'/>
+                            Scheinbar wurden noch keine Messungen angelegt
+                        </Header>
+                        <Segment.Inline>
+                            <Button primary onClick={() => setMessungAddOpen(true)}>Messung anlegen</Button>
+                        </Segment.Inline>
+                    </Segment>
+                }
+                <Card.Group>
+                    {
+                        alleMessungen.map((messung: {
+                            name: string,
+                            thermometerID: number,
+                            minTemperatur: number,
+                            maxTemperatur: number,
+                            id: number
+                        }) => {
+                            return (
+                                <Card key={messung.id}>
+                                    <Card.Content>
+                                        <Card.Header content={messung.name}/>
+                                        <Card.Meta>
+                                            <strong>ID</strong> - {messung.id}
+                                        </Card.Meta>
+                                        <Card.Description>
+                                            <strong>Maximaltemperatur</strong> - {messung.maxTemperatur}°C <br/>
+                                            <strong>Minimaltemperatur</strong> - {messung.minTemperatur}°C
+                                        </Card.Description>
+                                    </Card.Content>
+                                    <Card.Content extra>
+                                        <div className='ui two buttons'>
+                                            <Button color='green' icon={"graph"} as={Link} to={"/messung1"}>
+                                                Messen
+                                            </Button>
+                                            <Button color='red' icon={"trash"}>
+                                                Löschen
+                                            </Button>
+                                        </div>
+                                    </Card.Content>
+                                </Card>
+                            )
+                        })
+                    }
+                </Card.Group>
+            </Segment>
             <Segment.Group>
                 <Segment style={{minHeight: '5vh'}}>
                     Messungen
-                    <Button
-                        compact
-                        size='small'
-                        floated='right'
-                        onClick={clearLog}
-                    >
-                        Clear
-                    </Button>
+                    <Button compact size='small' floated='right' onClick={clearLog} icon={'trash'}/>
                 </Segment>
                 <Segment secondary>
               <pre>
@@ -160,4 +218,4 @@ const Messung = () => {
         </>
     );
 }
-export default Messung;
+export default Messungen;

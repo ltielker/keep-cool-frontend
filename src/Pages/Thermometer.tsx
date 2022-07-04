@@ -2,11 +2,10 @@ import {Button, Card, Grid, Header, Icon, Input, Segment} from "semantic-ui-reac
 import React, {ChangeEvent, useState} from "react";
 
 const Thermometer = () => {
-    const [error, setError] = useState<{}>({});
     const [thermometerAddOpen, setThermometerAddOpen] = useState(false);
     const [name, setName] = useState<string>("");
     const [id, setId] = useState<number>(0);
-    const [thermometer, setThermometer] = useState<{name: string, id: number}[]>([]);
+    const [thermometer, setThermometer] = useState<{ name: string, id: number }[]>([]);
 
     const handleName = (e: ChangeEvent<HTMLInputElement>) => {
         setName(e.target.value);
@@ -33,8 +32,11 @@ const Thermometer = () => {
             .then((data: {}) => {
                     setThermometerAddOpen(false);
                     setThermometer([...thermometer, {"name": name, "id": id}]);
+                    console.log(data);
                 }, (error) => {
                     console.log(error);
+                    setThermometerAddOpen(false);
+                    setThermometer([...thermometer, {"name": name, "id": id}]);
                 }
             )
     }
@@ -86,9 +88,6 @@ const Thermometer = () => {
                                             <Icon name='thermometer half'/>
                                             <Card.Header>{item.name}</Card.Header>
                                             <Card.Meta>{item.id}</Card.Meta>
-                                            <Card.Description>
-                                                Seriennummer, Temperatur, Einheit, Datum
-                                            </Card.Description>
                                         </Card.Content>
                                         <Card.Content extra>
                                             <div className='ui two buttons'>

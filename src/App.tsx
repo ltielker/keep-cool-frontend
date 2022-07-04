@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import LoginForm from "./Pages/login";
+import LoginForm from "./Pages/Login";
 import {Button, Image, Menu} from "semantic-ui-react";
-import {Container} from "react-bootstrap";
 import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
-import Thermometer from "./Pages/thermometer";
-import Messung from "./Pages/messung";
+import Thermometer from "./Pages/Thermometer";
+import Messungen from "./Pages/Messungen";
+import MessungDetail from "./Pages/MessungDetail";
 
 function App() {
     return (
@@ -13,20 +13,18 @@ function App() {
             <div>
                 <nav>
                     <Menu fixed='top' inverted>
-                        <Container>
-                            <Menu.Item as={Link} to={'/login'} header>
-                                <Image size='mini' inline src='KeepCoolIcon.png' style={{marginRight: '1.5em'}}/>
-                                KeepCool®
-                            </Menu.Item>
-                            <Menu.Item as={Link} to={'/thermometer'}>
-                                Thermometer
-                            </Menu.Item>
-                            <Menu.Item as={Link} to={'/messung'}>
-                                Messung
-                            </Menu.Item>
-                        </Container>
-                        <Menu.Item position='right' >
-                            <Button as={Link} to={'/login'} inverted >
+                        <Menu.Item as={Link} to={'/login'} header>
+                            <Image size='mini' inline src='KeepCoolIcon.png' style={{marginRight: '1.5em'}}/>
+                            KeepCool®
+                        </Menu.Item>
+                        <Menu.Item as={Link} to={'/thermometer'}>
+                            Thermometer
+                        </Menu.Item>
+                        <Menu.Item as={Link} to={'/messungen'}>
+                            Messungen
+                        </Menu.Item>
+                        <Menu.Item position='right'>
+                            <Button as={Link} to={'/login'} inverted>
                                 Login
                             </Button>
                         </Menu.Item>
@@ -35,7 +33,8 @@ function App() {
                 <Routes>
                     <Route path="/login" element={<LoginForm/>}/>
                     <Route path="/thermometer" element={<Thermometer/>}/>
-                    <Route path="/messung" element={<Messung/>}/>
+                    <Route path="/messungen" element={<Messungen/>}/>
+                    <Route path="/messung1" element={<MessungDetail />}/>
                 </Routes>
             </div>
         </Router>
