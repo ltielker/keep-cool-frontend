@@ -17,7 +17,7 @@ const MessungDetail = () => {
 
     const loggeTemperatur = () => {
         setLog([...log, "logged"]);
-        fetch("http://localhost:8089/temperature", {
+        fetch("http://localhost:8080/KeepCool-1.0/KeepCool/Messwert/messen", {
             method: "GET",
             headers: {
                 "content-type": "application/json"
@@ -28,8 +28,8 @@ const MessungDetail = () => {
             // })
         })
             .then(res => res.json())
-            .then((res: {tinestamp: string, temperature: number}) => {
-                setLog([...log, `${res.tinestamp} : ${res.temperature}°C`]);
+            .then((res: {messzeit: string, temperatur: number, akku: number}) => {
+                setLog([...log, `${res.messzeit}: ${res.temperatur}°C, Akkustand: ${res.akku}%`]);
             },
             (error) => {
                 console.log(error)

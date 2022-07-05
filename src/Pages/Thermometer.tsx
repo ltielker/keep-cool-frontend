@@ -28,15 +28,14 @@ const Thermometer = () => {
                 "name": name
             })
         })
-            .then(res => res.json())
-            .then((data: {}) => {
+            .then(res => {
+                    res.json();
                     setThermometerAddOpen(false);
                     setThermometer([...thermometer, {"name": name, "id": id}]);
-                    console.log(data);
                 }, (error) => {
                     console.log(error);
-                    setThermometerAddOpen(false);
-                    setThermometer([...thermometer, {"name": name, "id": id}]);
+/*                    setThermometerAddOpen(false);
+                    setThermometer([...thermometer, {"name": name, "id": id}]);*/
                 }
             )
     }

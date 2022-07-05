@@ -33,15 +33,11 @@ const Messungen = () => {
     }
 
     const handleMinTemperature = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (Number.parseInt(e.target.value) > 0) {
-            setMinTemperature(Number.parseInt(e.target.value));
-        }
+        setMinTemperature(Number.parseInt(e.target.value));
     }
 
     const handleMaxTemperature = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (Number.parseInt(e.target.value) > 0) {
-            setMaxTemperature(Number.parseInt(e.target.value));
-        }
+        setMaxTemperature(Number.parseInt(e.target.value));
     }
 
     const handleCreateMessung = () => {
@@ -182,8 +178,8 @@ const Messungen = () => {
                                             <strong>ID</strong> - {messung.id}
                                         </Card.Meta>
                                         <Card.Description>
-                                            <strong>Maximaltemperatur</strong> - {messung.maxTemperatur}°C <br/>
-                                            <strong>Minimaltemperatur</strong> - {messung.minTemperatur}°C
+                                            <strong>Maximaltemperatur</strong>: {messung.maxTemperatur}°C <br/>
+                                            <strong>Minimaltemperatur</strong>: {messung.minTemperatur}°C
                                         </Card.Description>
                                     </Card.Content>
                                     <Card.Content extra>
