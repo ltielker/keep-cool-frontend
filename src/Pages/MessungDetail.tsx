@@ -26,18 +26,22 @@ const MessungDetail = (props: MessungDetailProps) => {
             headers: {
                 "content-type": "application/json"
             }
+            // ,
+            // body: JSON.stringify({
+            //     "messungID": 1,
+            // })
         })
             .then(res => res.json())
             .then((res: {date: string, time: number, temperatur: number, durchschnittstemperatur: string, akku: number}) => {
-                    setLog([...log, `${res.date}, ${res.time}: ${res.temperatur}°C, Durchscnitt: ${res.durchschnittstemperatur} °C, Akkustand: ${res.akku}%`]);
+                    setLog([...log, `${res.date}, ${res.time}: ${res.temperatur}°C, Durchschnitt: ${res.durchschnittstemperatur} °C, Akkustand: ${res.akku}%`]);
                 if (res.temperatur < messung.minTemperatur) {
                     if (notificationPermission) {
                         new Notification("KeepCool - Temperatur unterschritten", {
-                            body: `${res.date}, ${res.time}: ${res.temperatur} °C, Durchscnitt: ${res.durchschnittstemperatur} °C, Akkustand: ${res.akku}%`
+                            body: `${res.date}, ${res.time}: ${res.temperatur} °C, Durchschnitt: ${res.durchschnittstemperatur} °C, Akkustand: ${res.akku}%`
                         });
-                        setToHot(false);
-                        setModalOpen(true);
                     }
+                    setToHot(false);
+                    setModalOpen(true);
                 }
 
                 if (res.temperatur > messung.minTemperatur) {
@@ -45,9 +49,9 @@ const MessungDetail = (props: MessungDetailProps) => {
                         new Notification("KeepCool - Temperatur überschritten", {
                             body: `${res.date}, ${res.time}: ${res.temperatur} °C, Durchscnitt: ${res.durchschnittstemperatur} °C, Akkustand: ${res.akku}%`
                         });
-                        setToHot(true);
-                        setModalOpen(true);
                     }
+                    setToHot(true);
+                    setModalOpen(true);
                 }
             },
             (error) => {
@@ -112,27 +116,6 @@ const MessungDetail = (props: MessungDetailProps) => {
                     </Segment>
                 </Segment.Group>
             </Segment>
-            <Modal basic onClose={() => setModalOpen(false)} open={modalOpen} size='small'>
-                <Header icon>
-                    <Icon name='warning sign' />
-                    {toHot ? "Temperatur zu hoch" : "Temperatur zu niedrig"}
-                </Header>
-                <Modal.Content>
-                    <p>
-                        {
-                            toHot ?
-                            "Die Temperatur ist zu hoch. Bitte kühlen Sie die Ware."
-                            :
-                            "Die Temperatur ist zu niedrig. Bitte stellen Sie die Kühlung ein wenig wärmer."
-                        }
-                    </p>
-                </Modal.Content>
-                <Modal.Actions>
-                    <Button color='green' inverted onClick={() => setModalOpen(false)}>
-                        <Icon name='checkmark' /> Verstanden
-                    </Button>
-                </Modal.Actions>
-            </Modal>
         </>
     );
 }
