@@ -7,13 +7,14 @@ import Thermometer from "./Pages/Thermometer";
 import Messungen from "./Pages/Messungen";
 import MessungDetail from "./Pages/MessungDetail";
 import {Messung} from "./Types";
+import Richtlinien from "./Pages/Richtlinien";
 
 function App() {
     const [messung, setMessung] = React.useState<Messung>({} as Messung);
 
     return (
         <Router>
-            <div>
+            <div style={{overflow: "hidden"}}>
                 <nav>
                     <Menu fixed='top' inverted>
                         <Menu.Item as={Link} to={'/login'} header>
@@ -25,6 +26,9 @@ function App() {
                         </Menu.Item>
                         <Menu.Item as={Link} to={'/messungen'}>
                             Messungen
+                        </Menu.Item>
+                        <Menu.Item as={Link} to={'/richtlinien'}>
+                            Richtlinien
                         </Menu.Item>
                         <Menu.Item position='right'>
                             <Button as={Link} to={'/login'} inverted>
@@ -38,6 +42,7 @@ function App() {
                     <Route path="/thermometer" element={<Thermometer/>}/>
                     <Route path="/messungen" element={<Messungen setMessung={setMessung}/>}/>
                     <Route path="/messungDetail" element={<MessungDetail messung={messung} />}/>
+                    <Route path="/richtlinien" element={<Richtlinien />}/>
                 </Routes>
             </div>
         </Router>

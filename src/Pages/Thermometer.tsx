@@ -75,7 +75,7 @@ const Thermometer = () => {
                     </Grid>
                 </Segment>
             }
-            <Segment style={{height: thermometerAddOpen ? "65vh" : "75vh"}}>
+            <Segment /*style={{height: thermometerAddOpen ? "65vh" : "75vh"}}*/>
                 <Header as='h3'>Am System registrierte Thermometer</Header>
                 {
                     thermometer.map(
@@ -99,6 +99,18 @@ const Thermometer = () => {
                             )
                         }
                     )
+                }
+                {
+                    (thermometer.length === 0) &&
+                    <Segment placeholder style={{height: thermometerAddOpen ? "60vh" : "71vh"}}>
+                        <Header icon>
+                            <Icon name='search'/>
+                            Scheinbar wurden noch keine Thermometer angelegt
+                        </Header>
+                        <Segment.Inline>
+                            <Button primary onClick={() => setThermometerAddOpen(true)}>Thermometer anlegen</Button>
+                        </Segment.Inline>
+                    </Segment>
                 }
             </Segment>
         </>

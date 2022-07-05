@@ -108,7 +108,7 @@ const MessungDetail = (props: MessungDetailProps) => {
                         <Button compact size='small' floated='right' onClick={clearLog} icon={'trash'}/>
                     </Segment>
                     <Segment secondary>
-              <pre>
+              <pre style={{maxHeight: "36vh", overflow: "scroll"}}>
                 {log.map((e, i) => (
                     <div key={i}>{e}</div>
                 ))}

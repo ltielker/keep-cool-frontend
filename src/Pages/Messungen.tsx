@@ -77,7 +77,7 @@ const Messungen = (props: MessungenProps) => {
 
     return (
         <>
-            <Segment style={{height: '2vh'}}/>
+            <Segment style={{height: '2vh', overflow: "hidden"}}/>
             <Segment>
                 <Header as='h1'>
                     <Icon name='edit'/>
@@ -146,7 +146,7 @@ const Messungen = (props: MessungenProps) => {
                 </Header>
                 {
                     (alleMessungen === undefined || alleMessungen.length === 0) &&
-                    <Segment placeholder>
+                    <Segment placeholder style={{height: messungAddOpen ? "44vh" : "72vh"}}>
                         <Header icon>
                             <Icon name='search'/>
                             Scheinbar wurden noch keine Messungen angelegt
