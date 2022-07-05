@@ -6,8 +6,11 @@ import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 import Thermometer from "./Pages/Thermometer";
 import Messungen from "./Pages/Messungen";
 import MessungDetail from "./Pages/MessungDetail";
+import {Messung} from "./Types";
 
 function App() {
+    const [messung, setMessung] = React.useState<Messung>({} as Messung);
+
     return (
         <Router>
             <div>
@@ -33,8 +36,8 @@ function App() {
                 <Routes>
                     <Route path="/login" element={<LoginForm/>}/>
                     <Route path="/thermometer" element={<Thermometer/>}/>
-                    <Route path="/messungen" element={<Messungen/>}/>
-                    <Route path="/messung1" element={<MessungDetail />}/>
+                    <Route path="/messungen" element={<Messungen setMessung={setMessung}/>}/>
+                    <Route path="/messungDetail" element={<MessungDetail messung={messung} />}/>
                 </Routes>
             </div>
         </Router>

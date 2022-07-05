@@ -1,26 +1,21 @@
 import {Button, Card, Grid, Header, Icon, Input, Modal, Segment} from "semantic-ui-react";
 import React, {ChangeEvent, useState} from "react";
 import {Link} from "react-router-dom";
+import {Messung} from "../Types";
 
-const Messungen = () => {
+interface MessungenProps {
+    setMessung: (messung: Messung) => void;
+}
+
+const Messungen = (props: MessungenProps) => {
     const [modalOpen, setModalOpen] = useState(false);
     const [log, setLog] = useState<String[]>([]);
     const [messungAddOpen, setMessungAddOpen] = useState(false);
-    const [alleMessungen, setAlleMessungen] = useState<{
-        name: string,
-        thermometerID: number,
-        minTemperatur: number,
-        maxTemperatur: number,
-        id: number
-    }[]>([]);
+    const [alleMessungen, setAlleMessungen] = useState<Messung[]>([]);
     const [name, setName] = useState<string>("");
     const [thermometerID, setThermometerID] = useState<number>(0);
     const [minTemperature, setMinTemperature] = useState<number>(0);
     const [maxTemperature, setMaxTemperature] = useState<number>(0);
-
-    const clearLog = () => {
-        setLog([])
-    };
 
     const handleName = (e: ChangeEvent<HTMLInputElement>) => {
         setName(e.target.value);
@@ -163,13 +158,7 @@ const Messungen = () => {
                 }
                 <Card.Group>
                     {
-                        alleMessungen.map((messung: {
-                            name: string,
-                            thermometerID: number,
-                            minTemperatur: number,
-                            maxTemperatur: number,
-                            id: number
-                        }) => {
+                        alleMessungen.map((messung: Messung) => {
                             return (
                                 <Card key={messung.id}>
                                     <Card.Content>
@@ -184,7 +173,7 @@ const Messungen = () => {
                                     </Card.Content>
                                     <Card.Content extra>
                                         <div className='ui two buttons'>
-                                            <Button color='green' icon={"graph"} as={Link} to={"/messung1"}>
+                                            <Button color='green' icon={"graph"} as={Link} to={"/messungDetail"} onClick={() => props.setMessung(messung)}>
                                                 Messen
                                             </Button>
                                             <Button color='red' icon={"trash"}>
@@ -198,19 +187,6 @@ const Messungen = () => {
                     }
                 </Card.Group>
             </Segment>
-            <Segment.Group>
-                <Segment style={{minHeight: '5vh'}}>
-                    Messungen
-                    <Button compact size='small' floated='right' onClick={clearLog} icon={'trash'}/>
-                </Segment>
-                <Segment secondary>
-              <pre>
-                {log.map((e, i) => (
-                    <div key={i}>{e}</div>
-                ))}
-              </pre>
-                </Segment>
-            </Segment.Group>
         </>
     );
 }
