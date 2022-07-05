@@ -116,6 +116,27 @@ const MessungDetail = (props: MessungDetailProps) => {
                     </Segment>
                 </Segment.Group>
             </Segment>
+            <Modal basic onClose={() => setModalOpen(false)} open={modalOpen} size='small'>
+                <Header icon>
+                    <Icon name='warning sign' />
+                    {toHot ? "Temperatur zu hoch" : "Temperatur zu niedrig"}
+                </Header>
+                <Modal.Content>
+                    <p>
+                        {
+                            toHot ?
+                                "Die Temperatur ist zu hoch."
+                                :
+                                "Die Temperatur ist zu niedrig."
+                        }
+                    </p>
+                </Modal.Content>
+                <Modal.Actions>
+                    <Button color='green' inverted onClick={() => setModalOpen(false)}>
+                        <Icon name='checkmark' /> Verstanden
+                    </Button>
+                </Modal.Actions>
+            </Modal>
         </>
     );
 }
