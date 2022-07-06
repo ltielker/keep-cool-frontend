@@ -133,8 +133,7 @@ const Messungen = (props: MessungenProps) => {
                         </Grid.Row>
                         <Grid.Column/>
                         <Grid.Column textAlign={"left"} verticalAlign={"bottom"}>
-                            <Button onClick={handleCreateMessung} floated={"right"}
-                                    content={'Thermometer hinzufügen'}/>
+                            <Button onClick={handleCreateMessung} floated={"right"} content={'Messung hinzufügen'}/>
                         </Grid.Column>
                     </Grid>
                 </Segment>
