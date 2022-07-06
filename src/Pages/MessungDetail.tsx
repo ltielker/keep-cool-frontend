@@ -21,15 +21,11 @@ const MessungDetail = (props: MessungDetailProps) => {
 
     const loggeTemperatur = () => {
         setLog([...log, "logged"]);
-        fetch("http://localhost:8080/KeepCool-1.0/KeepCool/Messwert/messen", {
+        fetch(`http://localhost:8080/KeepCool-1.0/KeepCool/Messwert/messen/${props.messung.id}`, {
             method: "GET",
             headers: {
                 "content-type": "application/json"
             }
-            // ,
-            // body: JSON.stringify({
-            //     "messungID": 1,
-            // })
         })
             .then(res => res.json())
             .then((res: {date: string, time: number, temperatur: number, durchschnittstemperatur: string, akku: number}) => {
