@@ -18,14 +18,40 @@ export const panes = [
                         <strong>Maximaltemperatur</strong>: Die Maximaltemperatur ist die Temperatur,
                         die die Ware nicht überschreiten darf.
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec eget ex at mauris aliquet varius. Nullam quis
-                        orci eu lectus lobortis facilisis. Nulla facilisi.
-                        Donec egestas vulputate nisi, et consectetur lectus
-                        aliquet in. Nulla euismod, nisi vel tincidunt
-                        sollicitudin, nisi odio luctus libero, eget
-                        consectetur nunc nisl euismod elit.
+                    <p><br/>
+                        Folgende Bedingungen müssen bei Vorrichtungen und Behältern zur Lagerung und Beförderung von Lebensmitteln eingehalten werden:<br/><br/>
+
+                        1. Sie müssen für diesen Zweck geeignet sein.<br/>
+                        2. Sie müssen sauber und instand gehalten werden.<br/>
+                        3. Die Vorschriften zur Kennzeichnung nach der Bedarfsgegenständeverordnung sind zu beachten (z.B. Aufschrift „Nur für Lebensmittel“ bei Behältnissen für lose Lebensmittel)
+                        4. Eine nachteilige Beeinflussung der Lebensmittel ist auszuschließen.<br/>
+                        5. Bei zeitgleicher Beförderung anderer Waren neben Lebensmitteln oder verschiedener Lebensmittel müssen die verschiedenen Ladungsbestandteile streng voneinander getrennt werden.<br/>
+                        6. Behälter für die alternative Beförderung von verschiedenen Lebensmitteln oder anderer Waren müssen zwischen den einzelnen Ladungsvorgängen erforderlichenfalls gereinigt und desinfiziert werden.<br/>
+                        7. Eine nachteilige Beeinflussung ist nach der LMHV jede ekelerregende oder sonstige Beeinträchtigung der einwandfreien Beschaffenheit von Lebensmitteln wie Mikroorganismen, Verunreinigungen, Witterungseinflüsse, Gerüche, Temperaturen, Gas, Dämpfe, Rauch, Aerosole, tierische Schädlinge, menschliche und tierische Ausscheidungen sowie Abfall, Abwässer, Reinigungs-, Desinfektions-, Pflanzenschutz und Schädlingsbekämpfungsmittel.<br/>
+                        8. Für die Lagerung und den Transport sind – ebenso wie für die Herstellung und den Vertrieb von Lebensmitteln – geeignete HACCP-Konzepte zu erstellen.<br/>
+                        9. Eigenkontrollen sind unerlässlich.<br/><br/><br/>
+
+
+                        Das Beförderungsmittel muss sauber sein. Dazu gelten folgende Vorschriften:<br/><br/>
+
+                        1. Reinigung und Desinfektion des Beförderungsmittels gelten als transportvorbereitende
+                        Maßnahmen.<br/>
+                        2. Der Laderaum des Beförderungsmittels muss so sauber sein, dass die darin beförderten
+                        Lebensmittel hygienisch nicht negativ beeinflusst werden. Es handelt sich um eine Maßnahme der
+                        Lebensmittel-Hygiene.<br/>
+                        3. Kontrolle und Pflege des Laderaums sind laufend durchzuführen und zu dokumentieren.<br/>
+                        4. Die Art, Reihenfolge und Häufigkeit der erforderlichen Reinigungs- und Desinfektionsmaßnahmen
+                        ist von der Art des Transportgutes abhängig.<br/>
+                        5. Eine Unterhaltsreinigung, eine Grundreinigung und eine Desinfektion sind zu unterscheiden.<br/>
+                        6. Für Kühlfahrzeuge und Tiefkühlfahrzeuge, die verpackte Ware befördern, ist die
+                        Unterhaltsreinigung in der Regel ausreichend. Die Reinigung ist mit Datum und Unterschrift zu
+                        dokumentieren.<br/>
+                        7. Die Grundreinigung hat in regelmäßigen Abständen zu erfolgen.<br/>
+                        8. Der Verlader ist für die Desinfektion verantwortlich. Sie wird bei Bedarf vorgenommen. In der
+                        Regel ist sie bei Transportfahrzeugen für unverpackte Ware – insbesondere Fleisch oder Fisch –
+                        erforderlich.<br/>
+                        9. Die durchgeführte Desinfektion muss dokumentiert werden.<br/>
+
                     </p>
                 </Segment>
             </Tab.Pane>
@@ -45,14 +71,39 @@ export const panes = [
                     <p>
                         <strong>Maximaltemperatur</strong>: 7 °C
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec eget ex at mauris aliquet varius. Nullam quis
-                        orci eu lectus lobortis facilisis. Nulla facilisi.
-                        Donec egestas vulputate nisi, et consectetur lectus
-                        aliquet in. Nulla euismod, nisi vel tincidunt
-                        sollicitudin, nisi odio luctus libero, eget
-                        consectetur nunc nisl euismod elit.
+                    <p><br/>
+                        Folgende Bedingungen müssen bei Vorrichtungen und Behältern zur Lagerung und Beförderung von Lebensmitteln eingehalten werden:<br/><br/>
+
+                        1. Sie müssen für diesen Zweck geeignet sein.<br/>
+                        2. Sie müssen sauber und instand gehalten werden.<br/>
+                        3. Die Vorschriften zur Kennzeichnung nach der Bedarfsgegenständeverordnung sind zu beachten (z.B. Aufschrift „Nur für Lebensmittel“ bei Behältnissen für lose Lebensmittel)
+                        4. Eine nachteilige Beeinflussung der Lebensmittel ist auszuschließen.<br/>
+                        5. Bei zeitgleicher Beförderung anderer Waren neben Lebensmitteln oder verschiedener Lebensmittel müssen die verschiedenen Ladungsbestandteile streng voneinander getrennt werden.<br/>
+                        6. Behälter für die alternative Beförderung von verschiedenen Lebensmitteln oder anderer Waren müssen zwischen den einzelnen Ladungsvorgängen erforderlichenfalls gereinigt und desinfiziert werden.<br/>
+                        7. Eine nachteilige Beeinflussung ist nach der LMHV jede ekelerregende oder sonstige Beeinträchtigung der einwandfreien Beschaffenheit von Lebensmitteln wie Mikroorganismen, Verunreinigungen, Witterungseinflüsse, Gerüche, Temperaturen, Gas, Dämpfe, Rauch, Aerosole, tierische Schädlinge, menschliche und tierische Ausscheidungen sowie Abfall, Abwässer, Reinigungs-, Desinfektions-, Pflanzenschutz und Schädlingsbekämpfungsmittel.<br/>
+                        8. Für die Lagerung und den Transport sind – ebenso wie für die Herstellung und den Vertrieb von Lebensmitteln – geeignete HACCP-Konzepte zu erstellen.<br/>
+                        9. Eigenkontrollen sind unerlässlich.<br/><br/><br/>
+
+
+                        Das Beförderungsmittel muss sauber sein. Dazu gelten folgende Vorschriften:<br/><br/>
+
+                        1. Reinigung und Desinfektion des Beförderungsmittels gelten als transportvorbereitende
+                        Maßnahmen.<br/>
+                        2. Der Laderaum des Beförderungsmittels muss so sauber sein, dass die darin beförderten
+                        Lebensmittel hygienisch nicht negativ beeinflusst werden. Es handelt sich um eine Maßnahme der
+                        Lebensmittel-Hygiene.<br/>
+                        3. Kontrolle und Pflege des Laderaums sind laufend durchzuführen und zu dokumentieren.<br/>
+                        4. Die Art, Reihenfolge und Häufigkeit der erforderlichen Reinigungs- und Desinfektionsmaßnahmen
+                        ist von der Art des Transportgutes abhängig.<br/>
+                        5. Eine Unterhaltsreinigung, eine Grundreinigung und eine Desinfektion sind zu unterscheiden.<br/>
+                        6. Für Kühlfahrzeuge und Tiefkühlfahrzeuge, die verpackte Ware befördern, ist die
+                        Unterhaltsreinigung in der Regel ausreichend. Die Reinigung ist mit Datum und Unterschrift zu
+                        dokumentieren.<br/>
+                        7. Die Grundreinigung hat in regelmäßigen Abständen zu erfolgen.<br/>
+                        8. Der Verlader ist für die Desinfektion verantwortlich. Sie wird bei Bedarf vorgenommen. In der
+                        Regel ist sie bei Transportfahrzeugen für unverpackte Ware – insbesondere Fleisch oder Fisch –
+                        erforderlich.<br/>
+                        9. Die durchgeführte Desinfektion muss dokumentiert werden.<br/>
                     </p>
                 </Segment>
             </Tab.Pane>
@@ -72,14 +123,39 @@ export const panes = [
                     <p>
                         <strong>Maximaltemperatur</strong>: 8 °C
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec eget ex at mauris aliquet varius. Nullam quis
-                        orci eu lectus lobortis facilisis. Nulla facilisi.
-                        Donec egestas vulputate nisi, et consectetur lectus
-                        aliquet in. Nulla euismod, nisi vel tincidunt
-                        sollicitudin, nisi odio luctus libero, eget
-                        consectetur nunc nisl euismod elit.
+                    <p><br/>
+                        Folgende Bedingungen müssen bei Vorrichtungen und Behältern zur Lagerung und Beförderung von Lebensmitteln eingehalten werden:<br/><br/>
+
+                        1. Sie müssen für diesen Zweck geeignet sein.<br/>
+                        2. Sie müssen sauber und instand gehalten werden.<br/>
+                        3. Die Vorschriften zur Kennzeichnung nach der Bedarfsgegenständeverordnung sind zu beachten (z.B. Aufschrift „Nur für Lebensmittel“ bei Behältnissen für lose Lebensmittel)
+                        4. Eine nachteilige Beeinflussung der Lebensmittel ist auszuschließen.<br/>
+                        5. Bei zeitgleicher Beförderung anderer Waren neben Lebensmitteln oder verschiedener Lebensmittel müssen die verschiedenen Ladungsbestandteile streng voneinander getrennt werden.<br/>
+                        6. Behälter für die alternative Beförderung von verschiedenen Lebensmitteln oder anderer Waren müssen zwischen den einzelnen Ladungsvorgängen erforderlichenfalls gereinigt und desinfiziert werden.<br/>
+                        7. Eine nachteilige Beeinflussung ist nach der LMHV jede ekelerregende oder sonstige Beeinträchtigung der einwandfreien Beschaffenheit von Lebensmitteln wie Mikroorganismen, Verunreinigungen, Witterungseinflüsse, Gerüche, Temperaturen, Gas, Dämpfe, Rauch, Aerosole, tierische Schädlinge, menschliche und tierische Ausscheidungen sowie Abfall, Abwässer, Reinigungs-, Desinfektions-, Pflanzenschutz und Schädlingsbekämpfungsmittel.<br/>
+                        8. Für die Lagerung und den Transport sind – ebenso wie für die Herstellung und den Vertrieb von Lebensmitteln – geeignete HACCP-Konzepte zu erstellen.<br/>
+                        9. Eigenkontrollen sind unerlässlich.<br/><br/><br/>
+
+
+                        Das Beförderungsmittel muss sauber sein. Dazu gelten folgende Vorschriften:<br/><br/>
+
+                        1. Reinigung und Desinfektion des Beförderungsmittels gelten als transportvorbereitende
+                        Maßnahmen.<br/>
+                        2. Der Laderaum des Beförderungsmittels muss so sauber sein, dass die darin beförderten
+                        Lebensmittel hygienisch nicht negativ beeinflusst werden. Es handelt sich um eine Maßnahme der
+                        Lebensmittel-Hygiene.<br/>
+                        3. Kontrolle und Pflege des Laderaums sind laufend durchzuführen und zu dokumentieren.<br/>
+                        4. Die Art, Reihenfolge und Häufigkeit der erforderlichen Reinigungs- und Desinfektionsmaßnahmen
+                        ist von der Art des Transportgutes abhängig.<br/>
+                        5. Eine Unterhaltsreinigung, eine Grundreinigung und eine Desinfektion sind zu unterscheiden.<br/>
+                        6. Für Kühlfahrzeuge und Tiefkühlfahrzeuge, die verpackte Ware befördern, ist die
+                        Unterhaltsreinigung in der Regel ausreichend. Die Reinigung ist mit Datum und Unterschrift zu
+                        dokumentieren.<br/>
+                        7. Die Grundreinigung hat in regelmäßigen Abständen zu erfolgen.<br/>
+                        8. Der Verlader ist für die Desinfektion verantwortlich. Sie wird bei Bedarf vorgenommen. In der
+                        Regel ist sie bei Transportfahrzeugen für unverpackte Ware – insbesondere Fleisch oder Fisch –
+                        erforderlich.<br/>
+                        9. Die durchgeführte Desinfektion muss dokumentiert werden.<br/>
                     </p>
                 </Segment>
             </Tab.Pane>
@@ -99,14 +175,39 @@ export const panes = [
                     <p>
                         <strong>Maximaltemperatur</strong>: 10 °C
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec eget ex at mauris aliquet varius. Nullam quis
-                        orci eu lectus lobortis facilisis. Nulla facilisi.
-                        Donec egestas vulputate nisi, et consectetur lectus
-                        aliquet in. Nulla euismod, nisi vel tincidunt
-                        sollicitudin, nisi odio luctus libero, eget
-                        consectetur nunc nisl euismod elit.
+                    <p><br/>
+                        Folgende Bedingungen müssen bei Vorrichtungen und Behältern zur Lagerung und Beförderung von Lebensmitteln eingehalten werden:<br/><br/>
+
+                        1. Sie müssen für diesen Zweck geeignet sein.<br/>
+                        2. Sie müssen sauber und instand gehalten werden.<br/>
+                        3. Die Vorschriften zur Kennzeichnung nach der Bedarfsgegenständeverordnung sind zu beachten (z.B. Aufschrift „Nur für Lebensmittel“ bei Behältnissen für lose Lebensmittel)
+                        4. Eine nachteilige Beeinflussung der Lebensmittel ist auszuschließen.<br/>
+                        5. Bei zeitgleicher Beförderung anderer Waren neben Lebensmitteln oder verschiedener Lebensmittel müssen die verschiedenen Ladungsbestandteile streng voneinander getrennt werden.<br/>
+                        6. Behälter für die alternative Beförderung von verschiedenen Lebensmitteln oder anderer Waren müssen zwischen den einzelnen Ladungsvorgängen erforderlichenfalls gereinigt und desinfiziert werden.<br/>
+                        7. Eine nachteilige Beeinflussung ist nach der LMHV jede ekelerregende oder sonstige Beeinträchtigung der einwandfreien Beschaffenheit von Lebensmitteln wie Mikroorganismen, Verunreinigungen, Witterungseinflüsse, Gerüche, Temperaturen, Gas, Dämpfe, Rauch, Aerosole, tierische Schädlinge, menschliche und tierische Ausscheidungen sowie Abfall, Abwässer, Reinigungs-, Desinfektions-, Pflanzenschutz und Schädlingsbekämpfungsmittel.<br/>
+                        8. Für die Lagerung und den Transport sind – ebenso wie für die Herstellung und den Vertrieb von Lebensmitteln – geeignete HACCP-Konzepte zu erstellen.<br/>
+                        9. Eigenkontrollen sind unerlässlich.<br/><br/><br/>
+
+
+                        Das Beförderungsmittel muss sauber sein. Dazu gelten folgende Vorschriften:<br/><br/>
+
+                        1. Reinigung und Desinfektion des Beförderungsmittels gelten als transportvorbereitende
+                        Maßnahmen.<br/>
+                        2. Der Laderaum des Beförderungsmittels muss so sauber sein, dass die darin beförderten
+                        Lebensmittel hygienisch nicht negativ beeinflusst werden. Es handelt sich um eine Maßnahme der
+                        Lebensmittel-Hygiene.<br/>
+                        3. Kontrolle und Pflege des Laderaums sind laufend durchzuführen und zu dokumentieren.<br/>
+                        4. Die Art, Reihenfolge und Häufigkeit der erforderlichen Reinigungs- und Desinfektionsmaßnahmen
+                        ist von der Art des Transportgutes abhängig.<br/>
+                        5. Eine Unterhaltsreinigung, eine Grundreinigung und eine Desinfektion sind zu unterscheiden.<br/>
+                        6. Für Kühlfahrzeuge und Tiefkühlfahrzeuge, die verpackte Ware befördern, ist die
+                        Unterhaltsreinigung in der Regel ausreichend. Die Reinigung ist mit Datum und Unterschrift zu
+                        dokumentieren.<br/>
+                        7. Die Grundreinigung hat in regelmäßigen Abständen zu erfolgen.<br/>
+                        8. Der Verlader ist für die Desinfektion verantwortlich. Sie wird bei Bedarf vorgenommen. In der
+                        Regel ist sie bei Transportfahrzeugen für unverpackte Ware – insbesondere Fleisch oder Fisch –
+                        erforderlich.<br/>
+                        9. Die durchgeführte Desinfektion muss dokumentiert werden.<br/>
                     </p>
                 </Segment>
             </Tab.Pane>
@@ -126,126 +227,57 @@ export const panes = [
                     <p>
                         <strong>Maximaltemperatur</strong>: - 23 °C
                     </p>
-                    <p>
-                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean. A small river named Duden flows by their place and supplies it with the
-                        necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                        into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an
-                        almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum
-                        decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because
-                        there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little
-                        Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made
-                        herself on the way. When she reached the first hills of the Italic Mountains, she had a last
-                        view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and
-                        the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then
-                        she continued her way. On her way she met a copy. The copy warned the Little Blind Text, that
-                        where it came from it would have been rewritten a thousand times and everything that was left
-                        from its origin would be the word "and" and the Little Blind Text should turn around and return
-                        to its own, safe country. But nothing the copy said could convince her and so it didn’t take
-                        long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and
-                        dragged her into their agency, where they abused her for their projects again and again. And if
-                        she hasn’t been rewritten, then they are still using her. Far far away, behind the word
-                        mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated
-                        they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small
-                        river named Duden flows by their place and supplies it with the necessary regelialia. It is a
-                        paradisematic country, in which roasted parts of sentences fly into your mouth. Even the
-                        all-powerful Pointing has no control about the blind texts it is an almost unorthographic life
-                        One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the
-                        far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of
-                        bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
-                        She packed her seven versalia, put her initial into the belt and made herself on the way. When
-                        she reached the first hills of the Italic Mountains, she had a last view back on the skyline of
-                        her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road,
-                        the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On
-                        her way she met a copy. The copy warned the Little Blind Text, that where it came from it would
-                        have been rewritten a thousand times and everything that was left from its origin would be the
-                        word "and" and the Little Blind Text should turn around and return to its own, safe country. But
-                        nothing the copy said could convince her and so it didn’t take long until a few insidious Copy
-                        Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency,
-                        where they abused her for their projects again and again. And if she hasn’t been rewritten, then
-                        they are still using her. Far far away, behind the word mountains, far from the countries
-                        Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
-                        at the coast of the Semantics, a large language ocean. A small river named Duden flows by their
-                        place and supplies it with the necessary regelialia. It is a paradisematic country, in which
-                        roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control
-                        about the blind texts it is an almost unorthographic life One day however a small line of blind
-                        text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-                        advised her not to do so, because there were thousands of bad Commas, wild Question Marks and
-                        devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put
-                        her initial into the belt and made herself on the way. When she reached the first hills of the
-                        Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the
-                        headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric
-                        question ran over her cheek, then she continued her way. On her way she met a copy. The copy
-                        warned the Little Blind Text, that where it came from it would have been rewritten a thousand
-                        times and everything that was left from its origin would be the word "and" and the Little Blind
-                        Text should turn around and return to its own, safe country. But nothing the copy said could
-                        convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made
-                        her drunk with Longe and Parole and dragged her into their agency, where they abused her for
-                        their projects again and again. And if she hasn’t been rewritten, then they are still using her.
-                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean. A small river named Duden flows by their place and supplies it with the
-                        necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                        into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an
-                        almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum
-                        decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because
-                        there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little
-                        Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made
-                        herself on the way. When she reached the first hills of the Italic Mountains, she had a last
-                        view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and
-                        the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then
-                        she continued her way. On her way she met a copy. The copy warned the Little Blind Text, that
-                        where it came from it would have been rewritten a thousand times and everything that was left
-                        from its origin would be the word "and" and the Little Blind Text should turn around and return
-                        to its own, safe country. But nothing the copy said could convince her and so it didn’t take
-                        long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and
-                        dragged her into their agency, where they abused her for their projects again and again. And if
-                        she hasn’t been rewritten, then they are still using her. Far far away, behind the word
-                        mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated
-                        they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small
-                        river named Duden flows by their place and supplies it with the necessary regelialia. It is a
-                        paradisematic country, in which roasted parts of sentences fly into your mouth. Even the
-                        all-powerful Pointing has no control about the blind texts it is an almost unorthographic life
-                        One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the
-                        far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of
-                        bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
-                        She packed her seven versalia, put her initial into the belt and made herself on the way. When
-                        she reached the first hills of the Italic Mountains, she had a last view back on the skyline of
-                        her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road,
-                        the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On
-                        her way she met a copy. The copy warned the Little Blind Text, that where it came from it would
-                        have been rewritten a thousand times and everything that was left from its origin would be the
-                        word "and" and the Little Blind Text should turn around and return to its own, safe country. But
-                        nothing the copy said could convince her and so it didn’t take long until a few insidious Copy
-                        Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency,
-                        where they abused her for their projects again and again. And if she hasn’t been rewritten, then
-                        they are still using her. Far far away, behind the word mountains, far from the countries
-                        Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
-                        at the coast of the Semantics, a large language ocean. A small river named Duden flows by their
-                        place and supplies it with the necessary regelialia. It is a paradisematic country, in which
-                        roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control
-                        about the blind texts it is an almost unorthographic life One day however a small line of blind
-                        text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-                        advised her not to do so, because there were thousands of bad Commas, wild Question Marks and
-                        devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put
-                        her initial into the belt and made herself on the way. When she reached the first hills of the
-                        Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the
-                        headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric
-                        question ran over her cheek, then she continued her way. On her way she met a copy. The copy
-                        warned the Little Blind Text, that where it came from it would have been rewritten a thousand
-                        times and everything that was left from its origin would be the word "and" and the Little Blind
-                        Text should turn around and return to its own, safe country. But nothing the copy said could
-                        convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made
-                        her drunk with Longe and Parole and dragged her into their agency, where they abused her for
-                        their projects again and again. And if she hasn’t been rewritten, then they are still using
-                        her.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                        Semantics, a large language ocean. A small river named Duden flows by their place and supplies
-                        it with the necessary regelialia. It is a paradisematic country, in which roasted parts of
-                        sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind
-                        texts it is an almost unorthographic life One day however a small line of blind text by the name
-                        of Lorem Ipsum decided to leave for the far
+                    <p><br/>
+                        Nach der Verordnung über tiefgefrorene Lebensmittel (TLMV) gelten für den Transport
+                        tiefgefrorener Lebensmittel folgende Regeln:<br/><br/>
+
+                        1. Alle Beförderungsmittel mit einem Fassungsvermögen von mehr als zwei m³ (Lastkraftwagen,
+                        Anhänger, Sattelanhänger, Container) müssen während des Betriebes mit geeigneten aufzeichnenden
+                        Lufttemperaturmessgeräten ausgestattet sein<br/>
+                        2. Alle Einlagerungs- und Lagereinrichtungen für tiefgefrorene Lebensmittel müssen während des
+                        Betriebes mit geeigneten aufzeichnenden Lufttemperaturmessgeräten ausgestattet sein<br/>
+                        3. Es dürfen nur zugelassene oder einem zugelassenen Muster entsprechende
+                        Lufttemperaturmessgeräte verwendet werden.<br/>
+                        4. Verantwortlich dafür ist der für die Beförderung Verantwortliche. Er muss sicherstellen, dass
+                        während des Betriebs die Lufttemperatur mit den Lufttemperaturmessgeräten so häufig und in
+                        regelmäßigen Zeitabständen gemessen und aufgezeichnet wird, dass das Temperaturgeschehen
+                        nachvollziehbar ist. Die Aufbewahrungsfrist beträgt mindestens ein Jahr.<br/>
+                        5. Örtliche Vertriebe sind von der Pflicht zur Lufttemperaturmessung mit einem aufzeichnenden
+                        Gerät ausgenommen.<br/><br/><br/>
+
+
+                        Folgende Bedingungen müssen bei Vorrichtungen und Behältern zur Lagerung und Beförderung von Lebensmitteln eingehalten werden:<br/><br/>
+
+                        1. Sie müssen für diesen Zweck geeignet sein.<br/>
+                        2. Sie müssen sauber und instand gehalten werden.<br/>
+                        3. Die Vorschriften zur Kennzeichnung nach der Bedarfsgegenständeverordnung sind zu beachten (z.B. Aufschrift „Nur für Lebensmittel“ bei Behältnissen für lose Lebensmittel)
+                        4. Eine nachteilige Beeinflussung der Lebensmittel ist auszuschließen.<br/>
+                        5. Bei zeitgleicher Beförderung anderer Waren neben Lebensmitteln oder verschiedener Lebensmittel müssen die verschiedenen Ladungsbestandteile streng voneinander getrennt werden.<br/>
+                        6. Behälter für die alternative Beförderung von verschiedenen Lebensmitteln oder anderer Waren müssen zwischen den einzelnen Ladungsvorgängen erforderlichenfalls gereinigt und desinfiziert werden.<br/>
+                        7. Eine nachteilige Beeinflussung ist nach der LMHV jede ekelerregende oder sonstige Beeinträchtigung der einwandfreien Beschaffenheit von Lebensmitteln wie Mikroorganismen, Verunreinigungen, Witterungseinflüsse, Gerüche, Temperaturen, Gas, Dämpfe, Rauch, Aerosole, tierische Schädlinge, menschliche und tierische Ausscheidungen sowie Abfall, Abwässer, Reinigungs-, Desinfektions-, Pflanzenschutz und Schädlingsbekämpfungsmittel.<br/>
+                        8. Für die Lagerung und den Transport sind – ebenso wie für die Herstellung und den Vertrieb von Lebensmitteln – geeignete HACCP-Konzepte zu erstellen.<br/>
+                        9. Eigenkontrollen sind unerlässlich.<br/><br/><br/>
+
+
+                        Das Beförderungsmittel muss sauber sein. Dazu gelten folgende Vorschriften:<br/><br/>
+
+                        1. Reinigung und Desinfektion des Beförderungsmittels gelten als transportvorbereitende
+                        Maßnahmen.<br/>
+                        2. Der Laderaum des Beförderungsmittels muss so sauber sein, dass die darin beförderten
+                        Lebensmittel hygienisch nicht negativ beeinflusst werden. Es handelt sich um eine Maßnahme der
+                        Lebensmittel-Hygiene.<br/>
+                        3. Kontrolle und Pflege des Laderaums sind laufend durchzuführen und zu dokumentieren.<br/>
+                        4. Die Art, Reihenfolge und Häufigkeit der erforderlichen Reinigungs- und Desinfektionsmaßnahmen
+                        ist von der Art des Transportgutes abhängig.<br/>
+                        5. Eine Unterhaltsreinigung, eine Grundreinigung und eine Desinfektion sind zu unterscheiden.<br/>
+                        6. Für Kühlfahrzeuge und Tiefkühlfahrzeuge, die verpackte Ware befördern, ist die
+                        Unterhaltsreinigung in der Regel ausreichend. Die Reinigung ist mit Datum und Unterschrift zu
+                        dokumentieren.<br/>
+                        7. Die Grundreinigung hat in regelmäßigen Abständen zu erfolgen.<br/>
+                        8. Der Verlader ist für die Desinfektion verantwortlich. Sie wird bei Bedarf vorgenommen. In der
+                        Regel ist sie bei Transportfahrzeugen für unverpackte Ware – insbesondere Fleisch oder Fisch –
+                        erforderlich.<br/>
+                        9. Die durchgeführte Desinfektion muss dokumentiert werden.<br/>
                     </p>
                 </Segment>
             </Tab.Pane>
