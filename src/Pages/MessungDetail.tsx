@@ -21,7 +21,7 @@ const MessungDetail = (props: MessungDetailProps) => {
 
     const loggeTemperatur = () => {
         setLog([...log, "logged"]);
-        fetch(`http://localhost:8080/KeepCool-1.0/KeepCool/Messwert/messen/${props.messung.id}`, {
+        fetch(`http://localhost:8080/KeepCool-1.0/KeepCool/Messwert/messen`, {
             method: "GET",
             headers: {
                 "content-type": "application/json"
@@ -39,8 +39,7 @@ const MessungDetail = (props: MessungDetailProps) => {
                     setToHot(false);
                     setModalOpen(true);
                 }
-
-                if (res.temperatur > messung.minTemperatur) {
+                if (res.temperatur > messung.maxTemperatur) {
                     if (notificationPermission) {
                         new Notification("KeepCool - Temperatur überschritten", {
                             body: `${res.date}, ${res.time}: ${res.temperatur} °C, Durchscnitt: ${res.durchschnittstemperatur} °C, Akkustand: ${res.akku}%`
